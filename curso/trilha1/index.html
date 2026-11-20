@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilha 1 · Fundamentos | Hermes + NotebookLM</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class',theme:{extend:{colors:{primary:'#FACC15',dark:{900:'#111827',800:'#1f2937',700:'#374151',600:'#4b5563'}}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Inter',sans-serif}.dark body{background-color:#111827}
+.topic-explanation{display:none}.topic-explanation.active{display:block}
+html:not(.dark) body{background-color:#f8fafc}
+html:not(.dark) .bg-dark-900{background-color:#fff}html:not(.dark) .bg-dark-800{background-color:#f9fafb}
+html:not(.dark) .bg-dark-700{background-color:#f3f4f6}html:not(.dark) .bg-dark-600{background-color:#e5e7eb}
+html:not(.dark) .text-neutral-100{color:#111827}html:not(.dark) .text-neutral-300{color:#4b5563}
+html:not(.dark) .text-neutral-400{color:#6b7280}html:not(.dark) .text-neutral-500{color:#9ca3af}
+html:not(.dark) .border-dark-600{border-color:#d1d5db}html:not(.dark) .border-dark-700{border-color:#e5e7eb}
+html:not(.dark) .text-emerald-400{color:#059669}
+html:not(.dark) .bg-emerald-500\/20{background-color:rgba(5,150,105,.12)}
+html:not(.dark) .bg-emerald-500\/10{background-color:rgba(5,150,105,.08)}
+html:not(.dark) .border-emerald-500\/30{border-color:rgba(5,150,105,.25)}
+html:not(.dark) .hover\:bg-emerald-500\/10:hover{background-color:rgba(5,150,105,.08)}
+html:not(.dark) .hover\:text-emerald-400:hover{color:#059669}
+html:not(.dark) .group:hover .group-hover\:text-emerald-400{color:#059669}
+html:not(.dark) .text-blue-400{color:#2563eb}
+html:not(.dark) .hover\:bg-blue-500\/10:hover{background-color:rgba(37,99,235,.08)}
+html:not(.dark) .hover\:text-blue-400:hover{color:#2563eb}
+html:not(.dark) .text-purple-400{color:#7c3aed}
+html:not(.dark) .hover\:bg-purple-500\/10:hover{background-color:rgba(124,58,237,.08)}
+html:not(.dark) .hover\:text-purple-400:hover{color:#7c3aed}
+html:not(.dark) [class*="bg-gradient-to"]{background-image:none!important}
+html:not(.dark) .text-primary{color:#a16207}html:not(.dark) .bg-primary\/10{background-color:rgba(161,98,7,.08)}
+html:not(.dark) .border-primary\/40{border-color:rgba(161,98,7,.25)}
+html:not(.dark) .text-sky-400{color:#0369a1}html:not(.dark) .text-yellow-400{color:#a16207}
+html:not(.dark) .hover\:text-sky-300:hover{color:#0284c7}html:not(.dark) .hover\:text-yellow-300:hover{color:#854d0e}
+html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
+.dark .border-dark-600{border-color:#374151}
+.dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]){border-color:#374151}
+</style>
+</head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen">
+
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
+<span class="text-2xl">🪶</span><span class="font-bold text-lg hidden sm:inline">Hermes + NotebookLM</span></a>
+<span class="text-neutral-600">|</span>
+<a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a href="index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+<a href="../trilha2/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Na prática</span></a>
+<a href="../trilha3/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Avançado</span></a>
+<button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2">
+<svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+</button>
+</div></div></div></nav>
+
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">TRILHA 1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧱 Fundamentos de Hermes e NotebookLM</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Tudo do zero: o que são essas duas ferramentas, por que combiná-las muda o jogo, e como deixar o sistema rodando na sua máquina hoje.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">5</div><div class="text-xs text-neutral-400">Módulos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">36+</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~3h</div><div class="text-xs text-neutral-400">Duração</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div>
+</div>
+</div></header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<a href="#modulo-1-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.1</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🪶 O que é Hermes</h3>
+<p class="text-xs text-neutral-400">Seu agente que mora no Telegram</p></a>
+<a href="#modulo-1-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.2</span><span class="text-xs text-neutral-500">~40 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🧠 O que é NotebookLM</h3>
+<p class="text-xs text-neutral-400">300 fontes, $0, RAG completo</p></a>
+<a href="#modulo-1-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">⚡ Por que combinar</h3>
+<p class="text-xs text-neutral-400">Conhecimento vira ação</p></a>
+<a href="#modulo-1-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.4</span><span class="text-xs text-neutral-500">~45 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🔧 Instalação e setup</h3>
+<p class="text-xs text-neutral-400">Skill + login + symlink</p></a>
+<a href="#modulo-1-5" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.5</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">✅ Primeiros testes</h3>
+<p class="text-xs text-neutral-400">Validando ponta a ponta</p></a>
+</div>
+</section>
+
+<h2 class="text-2xl font-bold mb-6">Conteúdo detalhado</h2>
+
+<!-- MODULO 1.1 -->
+<div id="modulo-1-1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.1</span><span class="text-xs text-neutral-500">~35 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🪶 O que é Hermes Agent</h3>
+<p class="text-neutral-400 text-sm">Agente pessoal que vive no Telegram, conhece você e melhora a cada conversa.</p>
+</div>
+<div class="divide-y divide-dark-600">
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">📱</span><div><span class="font-medium">Agente que vive no chat</span><span class="text-neutral-500 text-sm ml-2">- Telegram como interface única</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes é um agente AI que roda na sua máquina (Mac/Linux) e responde via Telegram. Sem app extra, sem aprender ferramenta nova — você só conversa.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Telegram está no seu bolso 24/7. Pode pedir algo no ônibus, no banheiro, na esteira. Resposta chega sem você abrir laptop.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Interface assíncrona · execução local · bot único · contexto persistente entre mensagens.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">🧬</span><div><span class="font-medium">Soul.md — a alma do agente</span><span class="text-neutral-500 text-sm ml-2">- Como Hermes te conhece</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Arquivo `~/.hermes/soul.md` que descreve você: identidade, missão, voz, ritmo, pessoas, ferramentas. Carregado em toda task.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem soul.md, Hermes é um chatbot genérico. Com soul.md, ele é SEU chefe de gabinete. Quanto mais específico, mais útil.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Identidade · pilares anuais · voz e tom · ritmo de trabalho · decisões já tomadas · hard nos.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🔌</span><div><span class="font-medium">Skills — extensões plugáveis</span><span class="text-neutral-500 text-sm ml-2">- Como Hermes ganha habilidades</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Arquivos `.md` com instruções específicas. Quando o pedido casa com a descrição, Hermes carrega aquela skill. NotebookLM é uma skill.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você não precisa programar. Baixa o `.md`, joga na pasta, pronto. Habilidade nova sem código.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Discovery automático · ativação por intenção · isolamento (skill não polui contexto principal) · composição (várias skills no mesmo pedido).</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🧠</span><div><span class="font-medium">Memória persistente</span><span class="text-neutral-500 text-sm ml-2">- Hermes lembra entre conversas</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Sistema de arquivos onde Hermes guarda fatos sobre você, feedbacks de correção, contexto de projetos. Carregado em sessões futuras.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você não repete instruções. Disse uma vez "nunca uses menu interativo" — ele lembra para sempre.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Tipos (user, feedback, project, reference) · MEMORY.md como índice · evolução vs duplicação.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🛠️</span><div><span class="font-medium">Tools — o agente AGE</span><span class="text-neutral-500 text-sm ml-2">- Ler, escrever, executar</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes não só responde texto: lê arquivos, edita código, dispara comandos, faz HTTP, consulta APIs. Toda ação real passa por uma tool.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a diferença entre "ChatGPT que sugere" e "agente que executa". Hermes resolve, não opina.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Read/Write/Edit · Bash · WebFetch · MCP (servers externos) · permissões e modos de execução.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🌐</span><div><span class="font-medium">Hermes vs Claude Code vs ChatGPT</span><span class="text-neutral-500 text-sm ml-2">- Quando usar cada um</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes = camada de orquestração via Telegram. Claude Code = mesma engine, terminal. ChatGPT = chat puro, sem tools locais.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Não é tribalismo. É saber escolher: trabalho profundo → Claude Code. Mobilidade → Hermes. Brainstorm rápido → ChatGPT.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Mesma memória entre Hermes e Claude Code · skill compartilhada · networked memory.</p></div>
+</div></div></div>
+
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button onclick="openModal('modal-1-1')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+<a href="modulo-1-1.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
+</div></div>
+
+<!-- MODULO 1.2 -->
+<div id="modulo-1-2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.2</span><span class="text-xs text-neutral-500">~40 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🧠 O que é NotebookLM</h3>
+<p class="text-neutral-400 text-sm">A plataforma de pesquisa #1 do mundo. Grátis. Cita tudo. Cabe 300 fontes.</p>
+</div>
+<div class="divide-y divide-dark-600">
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">📚</span><div><span class="font-medium">Notebook = container de fontes</span><span class="text-neutral-500 text-sm ml-2">- Como o conhecimento é organizado</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Cada notebook agrupa até ~300 fontes (PDFs, sites, YouTube, áudios, imagens). Tudo indexado. Você pergunta, NotebookLM responde citando trechos exatos.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É um RAG industrial sem você precisar montar vetor DB, pagar OpenAI, ou ajustar chunking.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Source · grounding · citação inline · isolamento por notebook.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">🎙️</span><div><span class="font-medium">Audio Overview — o famoso podcast</span><span class="text-neutral-500 text-sm ml-2">- Dois apresentadores discutindo seu conteúdo</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Geração automática de podcast com 2 vozes debatendo as fontes. ~12-20 min de áudio natural com transições e perguntas.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você consome conteúdo enquanto dirige, treina, lava louça. Conhecimento entra pelo ouvido.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Format (deep-dive, brief, critique, debate) · length · instruções customizáveis · download MP3.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🎬</span><div><span class="font-medium">Vídeo Overview e Slide Deck</span><span class="text-neutral-500 text-sm ml-2">- Conteúdo visual automático</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Vídeo explainer narrado com visuais (estilos: clássico, whiteboard, anime, watercolor...). Slide deck em PDF/PPTX, pronto para apresentar.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você termina uma reunião, pede um deck baseado nas notas — sai em minutos pronto.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Style · format detailed/presenter · revise-slide para iterar por slide individual.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🗺️</span><div><span class="font-medium">Mind map, infográfico, relatório</span><span class="text-neutral-500 text-sm ml-2">- 7 outros artefatos</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Mind map (.json), infográfico (.png landscape/portrait), report (briefing-doc, study-guide, blog-post), data table (.csv), quiz e flashcards.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mesma fonte, formato diferente. Você reaproveita pesquisa de 10 jeitos sem refazer trabalho.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Artifact list · status (in_progress/pending/completed) · download multi-formato.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🔬</span><div><span class="font-medium">Web research integrada</span><span class="text-neutral-500 text-sm ml-2">- Pesquisa profunda como fonte</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">`source add-research "query"` faz pesquisa na web (modo fast ou deep) e importa o resultado como fonte do notebook.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você não precisa abrir 50 abas e copiar. NotebookLM colhe, sintetiza, indexa.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Mode fast vs deep · research status/wait · import-all.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">💸</span><div><span class="font-medium">Por que custa $0</span><span class="text-neutral-500 text-sm ml-2">- E quais os limites reais</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Google subsidia. Você usa conta gratuita Google e tem acesso ilimitado (com rate limits). Custo de inferência fica com eles.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber os limites evita surpresa. Geração de áudio/vídeo pode dar throttle em horário de pico.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Rate limit · tempo de geração (áudio 10-20min, vídeo 15-45min) · retry automático.</p></div>
+</div></div></div>
+
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button onclick="openModal('modal-1-2')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+<a href="modulo-1-2.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
+</div></div>
+
+<!-- MODULO 1.3 -->
+<div id="modulo-1-3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">⚡ Por que combinar Hermes + NotebookLM</h3>
+<p class="text-neutral-400 text-sm">A diferença entre "ler uma resposta" e "transformar resposta em ação".</p>
+</div>
+<div class="divide-y divide-dark-600">
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🔗</span><div><span class="font-medium">Sozinhos cada um é poderoso. Juntos, é outro nível</span><span class="text-neutral-500 text-sm ml-2">- A multiplicação que ninguém vê</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes te dá execução (envia email, agenda, cria workflow). NotebookLM te dá pesquisa profunda com citação. Junte: agente que sabe E age.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a vantagem competitiva real. Quem só usa um dos dois fica anos atrás.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Pesquisa → ação · loop fechado · linguagem natural ponta a ponta.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">📍</span><div><span class="font-medium">Acesso de qualquer lugar</span><span class="text-neutral-500 text-sm ml-2">- Mobilidade real, não buzzword</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">NotebookLM tem app web e mobile, mas é navegação manual. Hermes te dá um endpoint conversacional — você manda voz da academia, ele despacha pra NotebookLM.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ideia surge no transporte público, no almoço, no chuveiro. Capturar na hora multiplica o output.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Telegram client universal · sincronia chat ↔ notebook · captura assíncrona.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🗄️</span><div><span class="font-medium">Segundo cérebro real</span><span class="text-neutral-500 text-sm ml-2">- Memória que cresce com você</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Um notebook permanente ("AI Brain") onde você empilha resumos de sessões. Hermes consulta antes de responder qualquer pergunta sobre seus projetos.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você nunca mais perde contexto entre conversas. Tudo o que aprendeu fica recuperável.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Wrapup pattern · second brain · ground-before-answer · skill instruction.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">⏰</span><div><span class="font-medium">Set once, run forever</span><span class="text-neutral-500 text-sm ml-2">- Automação assíncrona</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">"Toda manhã 8h, gera podcast de 5 min com insight do meu AI Brain e manda no chat." Você programa uma vez via cron. Forever.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Rotina cognitiva sem esforço. Como ter assistente que prepara briefing diário.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Cron via Hermes · n8n schedule trigger · audio overview agendado.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🏛️</span><div><span class="font-medium">Economia que assusta</span><span class="text-neutral-500 text-sm ml-2">- $0 vs $200/mês de RAG</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Montar RAG próprio: Pinecone ($70+), OpenAI embeddings ($), GPT-4 queries ($$). NotebookLM: $0. Google paga.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você roda 300 fontes por notebook, faz perguntas o dia inteiro, custo permanece zero. Não tem competição.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Custo zero de inferência · upper bound de uso · alternativas pagas (Mem, Pinecone+LangChain).</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🎯</span><div><span class="font-medium">Casos de uso reais</span><span class="text-neutral-500 text-sm ml-2">- O que isso desbloqueia hoje</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">YouTube strategy, e-commerce research, monitor de competidores, estudo técnico, briefing de cliente, preparação de aula.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Aterriza o conceito. Você vê onde aplicar na sua vida amanhã de manhã.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Por domínio · padrão "criar notebook por área" · não misturar contextos.</p></div>
+</div></div></div>
+
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button onclick="openModal('modal-1-3')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+<a href="modulo-1-3.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
+</div></div>
+
+<!-- MODULO 1.4 -->
+<div id="modulo-1-4" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.4</span><span class="text-xs text-neutral-500">~45 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🔧 Instalação e setup</h3>
+<p class="text-neutral-400 text-sm">Python 3.10+, venv, playwright, login persistente e symlink para PATH global.</p>
+</div>
+<div class="divide-y divide-dark-600">
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🐍</span><div><span class="font-medium">Pre-flight: Python 3.10+</span><span class="text-neutral-500 text-sm ml-2">- Por que o macOS default não serve</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Checagem `python3 --version`. Se for 3.9 (macOS Apple default), instalar 3.12 via Homebrew. Linux: apt python3.12.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o erro mais comum em setup. notebooklm-py exige 3.10+ ou quebra silenciosamente.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Binário correto · path no /opt/homebrew/ vs /usr/local · resolução com command -v.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">📦</span><div><span class="font-medium">venv + notebooklm-py[browser]</span><span class="text-neutral-500 text-sm ml-2">- Ambiente isolado, sempre</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">`python3 -m venv ~/.notebooklm-venv` → `pip install "notebooklm-py[browser]"` → `playwright install chromium`. Tudo em uma venv dedicada.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Evita erro "externally-managed-environment" e conflito com outras lib system-wide.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Activate · pip install extras · playwright como dependência browser.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🔗</span><div><span class="font-medium">Symlink para ~/bin</span><span class="text-neutral-500 text-sm ml-2">- CLI disponível em qualquer terminal</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">`ln -sf ~/.notebooklm-venv/bin/notebooklm ~/bin/notebooklm` e adicionar `~/bin` no PATH do shell rc.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem isso, você precisa ativar a venv antes de cada uso. Symlink resolve.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Symbolic link · PATH precedência · ln -sf (force replace).</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🔑</span><div><span class="font-medium">Login custom via playwright</span><span class="text-neutral-500 text-sm ml-2">- Por que `notebooklm login` quebra no Claude Code</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Script python que abre Chromium persistente, espera você logar no Google e navegar até notebooklm.google.com, depois salva `storage_state.json`.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O comando padrão exige terminal interativo. Claude Code/Hermes não tem. Solução: signal file.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Persistent context · cookie SID · signal via touch file · captura assíncrona da sessão.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">📥</span><div><span class="font-medium">Instalar a skill no Hermes/Claude Code</span><span class="text-neutral-500 text-sm ml-2">- Drop, reauth, pronto</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Baixar `NotebookLMSkill.md`, jogar no diretório de skills e dizer "instala a skill notebooklm". Hermes pede reautenticação se cookie faltou.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a ponte entre você e a CLI. Sem skill, Hermes não sabe que pode usar `notebooklm`.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Skill description (triggers) · system prompt · auto-discovery · autonomy rules (quais comandos confirmam).</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🩺</span><div><span class="font-medium">Diagnóstico quando falha</span><span class="text-neutral-500 text-sm ml-2">- Troubleshooting de auth</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">`notebooklm auth check` → procura cookie SID. Falhou? Apagar `~/.notebooklm/browser_profile` e refazer login.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cookies expiram, Google rotaciona token. Saber o ciclo te poupa horas.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">storage_state.json · cookie SID · re-auth seamless · logs em /tmp.</p></div>
+</div></div></div>
+
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button onclick="openModal('modal-1-4')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+<a href="modulo-1-4.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
+</div></div>
+
+<!-- MODULO 1.5 -->
+<div id="modulo-1-5" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.5</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">✅ Primeiros testes — validando ponta a ponta</h3>
+<p class="text-neutral-400 text-sm">Listar, criar, adicionar fonte, perguntar e gerar artefato. Se tudo passa, sistema OK.</p>
+</div>
+<div class="divide-y divide-dark-600">
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">📋</span><div><span class="font-medium">notebooklm list</span><span class="text-neutral-500 text-sm ml-2">- Smoke test #1</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Comando inicial. Retorna lista de notebooks com id, título, data. Confirma auth + conectividade.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Se falhar aqui, todo o resto falha. É o ping da skill.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Comando read-only · seguro pra rodar sem confirmação · output JSON com --json.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">➕</span><div><span class="font-medium">notebooklm create "Sandbox"</span><span class="text-neutral-500 text-sm ml-2">- Criar primeiro notebook</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Cria notebook vazio com o título "Sandbox". Retorna id (usar nos próximos comandos).</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Trabalhe num notebook descartável até dominar o fluxo. Não suje o AI Brain.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Notebook id · title (busca exata) · auto-uso após criar.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">🔗</span><div><span class="font-medium">Adicionar fonte URL</span><span class="text-neutral-500 text-sm ml-2">- source add + status READY</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">`notebooklm source add "https://..."` envia URL. Processo demora 30s-2min. `source list --json` confirma status=READY.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a base de tudo. Sem fonte, sem RAG, sem resposta útil.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">URL, YouTube, PDF local, áudio, imagem · estado PROCESSING → READY · wait blocker.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">❓</span><div><span class="font-medium">Primeira pergunta</span><span class="text-neutral-500 text-sm ml-2">- notebooklm ask "..."</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Faz query no contexto do notebook atual. Resposta cita as fontes inline. Adicionar `--json` traz referências estruturadas.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a interação core. Tudo orbita em torno do ask.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">RAG query · grounding · `--save-as-note` para fixar como nota · -s para limitar fontes.</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🎨</span><div><span class="font-medium">Gerar primeiro artefato</span><span class="text-neutral-500 text-sm ml-2">- mind-map é instantâneo</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">`notebooklm generate mind-map` é síncrono e rápido. Bom teste antes de gastar 15min num podcast.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Confirma que a engine de geração tá funcional. Se mind-map passa, áudio/vídeo provavelmente passam.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">artifact list · status · download (.json para mind-map).</p></div>
+</div></div></div>
+
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">📨</span><div><span class="font-medium">Teste fim a fim via Hermes</span><span class="text-neutral-500 text-sm ml-2">- Mensagem no Telegram</span></div></button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">"Hermes, lista meus notebooks." Resposta volta no chat. Confirma toda a stack: Telegram → Hermes → skill → notebooklm CLI → Google.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Tudo passou. Você está oficialmente no clube.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Cadeia ponta-a-ponta · onde olhar quando falha · logs de Hermes vs logs do CLI.</p></div>
+</div></div></div>
+
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button onclick="openModal('modal-1-5')" class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors">Ver em Modal</button>
+<a href="modulo-1-5.html" class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors">Ver Completo</a>
+</div></div>
+
+<div class="flex flex-col sm:flex-row gap-4 mt-12">
+<a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Início</a>
+<a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próxima Trilha: Na prática →</a>
+</div>
+
+</main>
+
+<!-- MODAIS -->
+<div id="modal-1-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.1</span><span class="font-semibold">O que é Hermes Agent</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-1.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+<div id="modal-1-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.2</span><span class="font-semibold">O que é NotebookLM</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-2.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+<div id="modal-1-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.3</span><span class="font-semibold">Por que combinar</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-3.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+<div id="modal-1-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.4</span><span class="font-semibold">Instalação e setup</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-4.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+<div id="modal-1-5" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.5</span><span class="font-semibold">Primeiros testes</span></div><button onclick="closeModal()" class="text-neutral-400 hover:text-white text-2xl leading-none">&times;</button></div><iframe src="modulo-1-5.html" class="flex-1 w-full rounded-b-xl"></iframe></div></div>
+
+<footer class="border-t border-dark-600 py-8 mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Hermes + NotebookLM · INEMA.CLUB · 2026</p></div></footer>
+
+<script>
+function toggleTopic(button){const t=button.closest('.topic-item');const e=t.querySelector('.topic-explanation');const m=button.closest('.bg-dark-800');m.querySelectorAll('.topic-explanation.active').forEach(x=>{if(x!==e)x.classList.remove('active')});e.classList.toggle('active')}
+function openModal(id){const m=document.getElementById(id);if(m){m.classList.remove('hidden');document.body.style.overflow='hidden'}}
+function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList.add('hidden'));document.body.style.overflow='auto'}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const tg=document.getElementById('theme-toggle'),di=document.getElementById('theme-toggle-dark-icon'),li=document.getElementById('theme-toggle-light-icon'),h=document.documentElement;
+if(localStorage.getItem('theme')==='light'){di.classList.remove('hidden');h.classList.remove('dark')}else{li.classList.remove('hidden')}
+tg.addEventListener('click',()=>{di.classList.toggle('hidden');li.classList.toggle('hidden');h.classList.toggle('dark');localStorage.setItem('theme',h.classList.contains('dark')?'dark':'light')});
+</script>
+</body></html>
