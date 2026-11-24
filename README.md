@@ -1,4 +1,4 @@
-﻿# ðŸª¶ Hermes + NotebookLM â€” Curso Completo
+# ðŸª¶ Hermes + NotebookLM â€” Curso Completo
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -6,7 +6,7 @@
 </div>
 
 
-Curso gratuito sobre como combinar o Hermes Agent com o Google NotebookLM, baseado no formato INEMA.CLUB.
+Curso gratuito sobre como combinar o Hermes Agent com o Google NotebookLM, baseado no formato ARCKHÉ AI.
 
 **3 trilhas Â· 15 mÃ³dulos Â· 90+ tÃ³picos**
 
@@ -16,7 +16,7 @@ Curso gratuito sobre como combinar o Hermes Agent com o Google NotebookLM, basea
 
 ## Acessar
 
-GitHub Pages: <https://inematds.github.io/hnotebooklm/>
+GitHub Pages: <https://linnoff88-dev.github.io/
 
 Localmente: `python3 -m http.server 8000` na raiz e abra `http://localhost:8000`.
 
@@ -39,9 +39,9 @@ Localmente: `python3 -m http.server 8000` na raiz e abra `http://localhost:8000`
 
 ## Design system
 
-Segue o INEMA.CLUB: Tailwind via CDN, Inter, dark/light toggle, navegaÃ§Ã£o consistente, mapa da trilha, tÃ³picos expansÃ­veis nos index, conteÃºdo profundo nas pÃ¡ginas de mÃ³dulo.
+Segue o ARCKHÉ AI: Tailwind via CDN, Inter, dark/light toggle, navegaÃ§Ã£o consistente, mapa da trilha, tÃ³picos expansÃ­veis nos index, conteÃºdo profundo nas pÃ¡ginas de mÃ³dulo.
 
-Curso parte do INEMA.CLUB Â· 2026.
+Curso parte do ARCKHÉ AI Â· 2026.
 
 ---
 
