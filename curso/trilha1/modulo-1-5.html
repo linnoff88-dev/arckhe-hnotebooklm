@@ -28,7 +28,7 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}.dark .b
 <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
 <section id="topico-1" class="mb-16"><div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">📋 notebooklm list — o ping</h2></div>
-<p class="text-neutral-300 mb-6 leading-relaxed">Primeiro teste obrigatório. Confirma autenticação + conectividade Google.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed">Primeiro teste obrigatório. Confirma autenticaçêo + conectividade Google.</p>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><pre class="font-mono text-xs text-neutral-300 bg-dark-900/60 rounded p-4">$ notebooklm list
 - abc123  YouTube Strategy  2025-12-01
 - def456  AI Brain          2025-11-15
@@ -36,7 +36,7 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}.dark .b
 <p class="text-sm text-neutral-400 mt-3">Resposta vazia mas sem erro = auth OK, ainda sem notebooks. Erro = volta pro 1.4.</p></div></section>
 
 <section id="topico-2" class="mb-16"><div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">➕ Criar notebook Sandbox</h2></div>
-<p class="text-neutral-300 mb-6 leading-relaxed">Não suje seu AI Brain. Crie um "Sandbox" pra brincar até dominar o fluxo.</p>
+<p class="text-neutral-300 mb-6 leading-relaxed">Nêo suje seu AI Brain. Crie um "Sandbox" pra brincar até dominar o fluxo.</p>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><pre class="font-mono text-xs text-neutral-300 bg-dark-900/60 rounded p-4">$ notebooklm create "Sandbox"
 Created: xyz999
 Auto-set as current context.
@@ -50,7 +50,7 @@ Current notebook: Sandbox (xyz999)</pre></div></section>
 
 <section id="topico-4" class="mb-16"><div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">❓ Primeira pergunta</h2></div>
 <p class="text-neutral-300 mb-6 leading-relaxed">Faz uma query no notebook. Resposta cita as fontes inline.</p>
-<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> O que checar</h3><ul class="space-y-2 text-neutral-300 text-sm"><li>• Resposta vem em segundos (não minutos)</li><li>• Tem citações ([1], [2]) apontando trecho específico</li><li>• Resposta menciona conteúdo real da fonte (não invenção)</li><li>• Sem erro de "no notebook context" — confirma <code class="bg-dark-700 text-blue-400 px-1 rounded">use</code> foi feito</li></ul></div></section>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">📊</span> O que checar</h3><ul class="space-y-2 text-neutral-300 text-sm"><li>• Resposta vem em segundos (nêo minutos)</li><li>• Tem citações ([1], [2]) apontando trecho específico</li><li>• Resposta menciona conteúdo real da fonte (nêo invençêo)</li><li>• Sem erro de "no notebook context" — confirma <code class="bg-dark-700 text-blue-400 px-1 rounded">use</code> foi feito</li></ul></div></section>
 
 <section id="topico-5" class="mb-16"><div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">🎨 Gerar primeiro artefato</h2></div>
 <p class="text-neutral-300 mb-6 leading-relaxed">Comece com <strong class="text-emerald-400">mind-map</strong> — é síncrono e instantâneo. Bom teste antes de gastar 15min num podcast.</p>
@@ -60,7 +60,7 @@ Current notebook: Sandbox (xyz999)</pre></div></section>
 <p class="text-neutral-300 mb-6 leading-relaxed">Agora o teste real: mensagem no Telegram. "Hermes, lista meus notebooks." Resposta volta no chat, confirma toda a stack.</p>
 <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6"><h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">🎯</span> Cadeia validada</h3><div class="font-mono text-xs text-neutral-300 space-y-1"><div>Telegram → Hermes bot → engine local → skill notebooklm → CLI → Google NotebookLM → resposta → CLI → skill → Hermes → Telegram</div></div><p class="text-neutral-300 text-sm mt-3">7 hops. Falhou em algum? Os logs (Hermes + CLI em /tmp) mostram exatamente onde.</p></div></section>
 
-<section class="mb-12"><div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8"><h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎉</span> Parabéns!</h2><p class="text-neutral-300 mb-6">Você terminou a Trilha 1. Hermes + NotebookLM estão rodando na sua máquina. Próxima trilha: <strong class="text-blue-400">como usar isso no dia a dia</strong>.</p><div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-emerald-400 mb-2">Próxima Trilha:</h3><p class="text-neutral-300">Trilha 2 — 🎯 NotebookLM no Hermes na prática</p></div><div class="flex flex-col sm:flex-row gap-4"><a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a><a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próxima Trilha →</a></div></div></section>
+<section class="mb-12"><div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8"><h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">🎉</span> Parabéns!</h2><p class="text-neutral-300 mb-6">Você terminou a Trilha 1. Hermes + NotebookLM estêo rodando na sua máquina. Próxima trilha: <strong class="text-blue-400">como usar isso no dia a dia</strong>.</p><div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-emerald-400 mb-2">Próxima Trilha:</h3><p class="text-neutral-300">Trilha 2 — 🎯 NotebookLM no Hermes na prática</p></div><div class="flex flex-col sm:flex-row gap-4"><a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">← Voltar para Trilha</a><a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Próxima Trilha →</a></div></div></section>
 
 </main>
 <footer class="border-t border-dark-600 py-8 mt-16"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Hermes + NotebookLM · ARCKHÉ AI · 2026</p></div></footer>

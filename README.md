@@ -1,4 +1,4 @@
-# ðŸª¶ Hermes + NotebookLM â€” Curso Completo
+# ê°Å¸ÂªÂ¶ Hermes + NotebookLM ê¢â¬â Curso Completo
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -6,13 +6,13 @@
 </div>
 
 
-Curso gratuito sobre como combinar o Hermes Agent com o Google NotebookLM, baseado no formato ARCKHÉ AI.
+Curso gratuito sobre como combinar o Hermes Agent com o Google NotebookLM, baseado no formato ARCKHê AI.
 
-**3 trilhas Â· 15 mÃ³dulos Â· 90+ tÃ³picos**
+**3 trilhas êÂ· 15 mêÂ³dulos êÂ· 90+ têÂ³picos**
 
-- **Trilha 1 â€” Fundamentos** (Emerald): o que Ã© Hermes, o que Ã© NotebookLM, por que combinar, instalaÃ§Ã£o e setup, primeiros testes
-- **Trilha 2 â€” Na prÃ¡tica** (Blue): conversar com cÃ©rebro, podcast via Telegram, fontes pelo celular, queries inteligentes, captura mobile
-- **Trilha 3 â€” AvanÃ§ado** (Purple): n8n + MCP, workflows agendados, Cloudflare Tunnel, Hermes Triad, OS pessoal
+- **Trilha 1 ê¢â¬â Fundamentos** (Emerald): o que êÂ© Hermes, o que êÂ© NotebookLM, por que combinar, instalaêÂ§êÂ£o e setup, primeiros testes
+- **Trilha 2 ê¢â¬â Na prêÂ¡tica** (Blue): conversar com cêÂ©rebro, podcast via Telegram, fontes pelo celular, queries inteligentes, captura mobile
+- **Trilha 3 ê¢â¬â AvanêÂ§ado** (Purple): n8n + MCP, workflows agendados, Cloudflare Tunnel, Hermes Triad, OS pessoal
 
 ## Acessar
 
@@ -24,24 +24,24 @@ Localmente: `python3 -m http.server 8000` na raiz e abra `http://localhost:8000`
 
 ```
 .
-â”œâ”€â”€ index.html                  # landing
-â””â”€â”€ curso/
-    â”œâ”€â”€ trilha1/                # Fundamentos
-    â”‚   â”œâ”€â”€ index.html
-    â”‚   â””â”€â”€ modulo-1-{1..5}.html
-    â”œâ”€â”€ trilha2/                # Na prÃ¡tica
-    â”‚   â”œâ”€â”€ index.html
-    â”‚   â””â”€â”€ modulo-2-{1..5}.html
-    â””â”€â”€ trilha3/                # AvanÃ§ado
-        â”œâ”€â”€ index.html
-        â””â”€â”€ modulo-3-{1..5}.html
+ê¢âÅê¢ââ¬ê¢ââ¬ index.html                  # landing
+ê¢ââê¢ââ¬ê¢ââ¬ curso/
+    ê¢âÅê¢ââ¬ê¢ââ¬ trilha1/                # Fundamentos
+    ê¢ââ   ê¢âÅê¢ââ¬ê¢ââ¬ index.html
+    ê¢ââ   ê¢ââê¢ââ¬ê¢ââ¬ modulo-1-{1..5}.html
+    ê¢âÅê¢ââ¬ê¢ââ¬ trilha2/                # Na prêÂ¡tica
+    ê¢ââ   ê¢âÅê¢ââ¬ê¢ââ¬ index.html
+    ê¢ââ   ê¢ââê¢ââ¬ê¢ââ¬ modulo-2-{1..5}.html
+    ê¢ââê¢ââ¬ê¢ââ¬ trilha3/                # AvanêÂ§ado
+        ê¢âÅê¢ââ¬ê¢ââ¬ index.html
+        ê¢ââê¢ââ¬ê¢ââ¬ modulo-3-{1..5}.html
 ```
 
 ## Design system
 
-Segue o ARCKHÉ AI: Tailwind via CDN, Inter, dark/light toggle, navegaÃ§Ã£o consistente, mapa da trilha, tÃ³picos expansÃ­veis nos index, conteÃºdo profundo nas pÃ¡ginas de mÃ³dulo.
+Segue o ARCKHê AI: Tailwind via CDN, Inter, dark/light toggle, navegaêÂ§êÂ£o consistente, mapa da trilha, têÂ³picos expansêÂ­veis nos index, conteêÂºdo profundo nas pêÂ¡ginas de mêÂ³dulo.
 
-Curso parte do ARCKHÉ AI Â· 2026.
+Curso parte do ARCKHê AI êÂ· 2026.
 
 ---
 

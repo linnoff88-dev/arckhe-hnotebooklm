@@ -63,7 +63,7 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">5</div><div class="text-xs text-neutral-400">Módulos</div></div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">36+</div><div class="text-xs text-neutral-400">Tópicos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~5h</div><div class="text-xs text-neutral-400">Duração</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~5h</div><div class="text-xs text-neutral-400">Duraçêo</div></div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Avançado</div><div class="text-xs text-neutral-400">Nível</div></div>
 </div></div></header>
 
@@ -99,14 +99,14 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div id="modulo-3-1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
 <div class="p-6 border-b border-dark-600"><div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.1</span><span class="text-xs text-neutral-500">~60 min</span></div>
 <h3 class="text-2xl font-bold mb-2">🔌 Integrando n8n + NotebookLM via MCP</h3>
-<p class="text-neutral-400 text-sm">Você cria workflows complexos de automação só conversando com Hermes.</p></div>
+<p class="text-neutral-400 text-sm">Você cria workflows complexos de automaçêo só conversando com Hermes.</p></div>
 <div class="divide-y divide-dark-600">
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🧬</span><div><span class="font-medium">MCP — Model Context Protocol</span><span class="text-neutral-500 text-sm ml-2">- O standard que mudou tudo</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Protocolo aberto da Anthropic que define como agentes AI conversam com ferramentas externas. n8n, Slack, GitHub, NotebookLM — todos expõem MCP servers.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem MCP, cada integração é custom code. Com MCP, é plug-and-play.</p></div>
-<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Server vs client · transport (stdio/SSE) · tools/resources/prompts · padrão JSON-RPC.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem MCP, cada integraçêo é custom code. Com MCP, é plug-and-play.</p></div>
+<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Server vs client · transport (stdio/SSE) · tools/resources/prompts · padrêo JSON-RPC.</p></div>
 </div></div></div>
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">⚙️</span><div><span class="font-medium">Habilitar MCP no n8n</span><span class="text-neutral-500 text-sm ml-2">- Instance level configuration</span></div></button>
@@ -119,27 +119,27 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🔑</span><div><span class="font-medium">Adicionar MCP ao Hermes (sem expor token)</span><span class="text-neutral-500 text-sm ml-2">- Bash command + env var</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Hermes gera um bash com placeholder de token, você troca pelo seu, roda no terminal. Token nunca passa pelo chat.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Segurança básica. Não vaza credencial no histórico.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Segurança básica. Nêo vaza credencial no histórico.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Hermes config local · MCP registration · token rotation.</p></div>
 </div></div></div>
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🛠️</span><div><span class="font-medium">Criar workflow só conversando</span><span class="text-neutral-500 text-sm ml-2">- "Hermes, monta para mim..."</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">"Hermes, cria workflow que toda manhã 8h pega insight do meu YouTube notebook e manda email." Ele monta os nodes, conecta, salva.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">"Hermes, cria workflow que toda manhê 8h pega insight do meu YouTube notebook e manda email." Ele monta os nodes, conecta, salva.</p></div>
 <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você descreve, ele constrói. Para de arrastar node manualmente.</p></div>
-<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Schedule trigger · HTTP node · Code node · validação automática.</p></div>
+<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Schedule trigger · HTTP node · Code node · validaçêo automática.</p></div>
 </div></div></div>
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🔍</span><div><span class="font-medium">Diagnóstico de execuções</span><span class="text-neutral-500 text-sm ml-2">- Quando o workflow quebra</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">"Hermes, por que o workflow X falhou ontem?" → ele puxa execuções via MCP, analisa logs, identifica node problemático.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você não precisa virar engenheiro n8n. Hermes ajuda a debugar.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Você nêo precisa virar engenheiro n8n. Hermes ajuda a debugar.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Execution log · error message · retry policy · fix-and-rerun.</p></div>
 </div></div></div>
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🏗️</span><div><span class="font-medium">Workflow vs script direto</span><span class="text-neutral-500 text-sm ml-2">- Quando usar n8n vs Hermes puro</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Ação one-shot → Hermes resolve. Recorrente, multi-step, com gates visuais → n8n.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Açêo one-shot → Hermes resolve. Recorrente, multi-step, com gates visuais → n8n.</p></div>
 <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Escolher errado custa horas. Saber a fronteira evita rework.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Determinismo · visibilidade · custo cognitivo · clientes vs uso pessoal.</p></div>
 </div></div></div>
@@ -153,13 +153,13 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div id="modulo-3-2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
 <div class="p-6 border-b border-dark-600"><div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.2</span><span class="text-xs text-neutral-500">~50 min</span></div>
 <h3 class="text-2xl font-bold mb-2">⏰ Workflows agendados — relatórios automáticos</h3>
-<p class="text-neutral-400 text-sm">"Toda manhã 8h, briefing diário do meu segundo cérebro no email." Set once, run forever.</p></div>
+<p class="text-neutral-400 text-sm">"Toda manhê 8h, briefing diário do meu segundo cérebro no email." Set once, run forever.</p></div>
 <div class="divide-y divide-dark-600">
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🕗</span><div><span class="font-medium">Schedule trigger no n8n</span><span class="text-neutral-500 text-sm ml-2">- Cron, intervalo, custom</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Node que dispara workflow em horário fixo. Aceita cron expression, intervalo simples ou Day of Week.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a fundação de qualquer automação recorrente. Sem ele, você dispara manual.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É a fundaçêo de qualquer automaçêo recorrente. Sem ele, você dispara manual.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Cron syntax (`0 8 * * 1-5`) · timezone · evitar deriva.</p></div>
 </div></div></div>
 
@@ -180,7 +180,7 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🔄</span><div><span class="font-medium">Rotina semanal de retro</span><span class="text-neutral-500 text-sm ml-2">- Sextas-feiras 17h</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Toda sexta 17h: workflow puxa todas as wrapups da semana, manda pro notebook AI Brain, gera report "Resumo da semana".</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Reflexão estruturada vira hábito sem força de vontade.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Reflexêo estruturada vira hábito sem força de vontade.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Batch processing · report briefing-doc · armazenamento histórico.</p></div>
 </div></div></div>
 
@@ -194,7 +194,7 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🚨</span><div><span class="font-medium">Tratamento de erro e alerta</span><span class="text-neutral-500 text-sm ml-2">- Workflow nunca silencia</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Try/catch nodes, error workflow global, alert no Telegram quando algo falha. Você descobre antes do cliente.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Workflow silencioso é workflow morto. Você não sabe se rodou.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Workflow silencioso é workflow morto. Você nêo sabe se rodou.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Error workflow · retry policy · observabilidade · self-healing.</p></div>
 </div></div></div>
 
@@ -241,13 +241,13 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">♻️</span><div><span class="font-medium">Launch Agents — boot automático</span><span class="text-neutral-500 text-sm ml-2">- Sobe MCP + tunnel sem terminal</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Dois plists em `~/Library/LaunchAgents/`: um sobe `python server.py --sse`, outro sobe `cloudflared tunnel run`. KeepAlive=true.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mac reinicia, tudo volta sozinho. Você não pensa mais.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mac reinicia, tudo volta sozinho. Você nêo pensa mais.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">launchctl load · RunAtLoad · KeepAlive · logs em StandardOutPath.</p></div>
 </div></div></div>
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🩺</span><div><span class="font-medium">Troubleshooting do MCP</span><span class="text-neutral-500 text-sm ml-2">- Tabela de sintoma → fix</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Auth expirou → re-login local. Server caiu → lsof + kickstart. Tunnel down → tunnel info. Cliente não conecta → curl no /sse.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Auth expirou → re-login local. Server caiu → lsof + kickstart. Tunnel down → tunnel info. Cliente nêo conecta → curl no /sse.</p></div>
 <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber a árvore de diagnóstico te poupa horas quando algo trava.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Logs centralizados · curl probe · launchctl kickstart · tail -f.</p></div>
 </div></div></div>
@@ -264,7 +264,7 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <p class="text-neutral-400 text-sm">Opus interroga, DeepSeek executa, GPT critica. Você acorda com artefato peer-reviewed.</p></div>
 <div class="divide-y divide-dark-600">
 
-<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">⚖️</span><div><span class="font-medium">Por que 1 IA não basta</span><span class="text-neutral-500 text-sm ml-2">- Blind spots arquiteturais</span></div></button>
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">⚖️</span><div><span class="font-medium">Por que 1 IA nêo basta</span><span class="text-neutral-500 text-sm ml-2">- Blind spots arquiteturais</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Modelos da mesma família compartilham viés. Worker e Critic da mesma arquitetura = critique fraco. Reflexion falha quando crítica vira "yes-and".</p></div>
 <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber isso muda como você combina modelos. Diversidade arquitetural multiplica qualidade.</p></div>
@@ -274,20 +274,20 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🪄</span><div><span class="font-medium">Opus — o Conductor</span><span class="text-neutral-500 text-sm ml-2">- Interroga, escreve brief, valida</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Faz 5-10 perguntas até constraints + success criteria + failure modes estarem claros. Escreve brief de uma página. Nunca executa.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem interrogação, o trabalho começa em premissa errada. Opus é a defesa contra isso.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem interrogaçêo, o trabalho começa em premissa errada. Opus é a defesa contra isso.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Brief one-pager · DISPATCH TO WORKER · review final.</p></div>
 </div></div></div>
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">⚒️</span><div><span class="font-medium">DeepSeek — o Worker</span><span class="text-neutral-500 text-sm ml-2">- 3-5 ângulos em paralelo</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Pega o brief, gera 1 solução por ângulo. Não shortlista. Hand off pro Critic, revisa, repete até SHIP.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Paralelismo de tentativas. Modelos não escolhem o melhor — geram opções.</p></div>
-<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">FUNDAMENTAL FLAW → trocar estratégia · não decidir, gerar · loop interno.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Pega o brief, gera 1 soluçêo por ângulo. Nêo shortlista. Hand off pro Critic, revisa, repete até SHIP.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Paralelismo de tentativas. Modelos nêo escolhem o melhor — geram opções.</p></div>
+<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">FUNDAMENTAL FLAW → trocar estratégia · nêo decidir, gerar · loop interno.</p></div>
 </div></div></div>
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🔍</span><div><span class="font-medium">GPT-5.5 — o Critic</span><span class="text-neutral-500 text-sm ml-2">- Rasga até segurar</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Retorna VERDICT (SHIP/REVISE/FUNDAMENTAL FLAW), WHAT BREAKS, WHAT'S MISSING, BEST ANGLE. Específico, não vago.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Retorna VERDICT (SHIP/REVISE/FUNDAMENTAL FLAW), WHAT BREAKS, WHAT'S MISSING, BEST ANGLE. Específico, nêo vago.</p></div>
 <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Crítica vaga = lixo. Crítica específica = trabalho que melhora.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">"X assume Y, falha quando Z" · veto até específico · independência arquitetural.</p></div>
 </div></div></div>
@@ -296,14 +296,14 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Você dorme. Worker e Critic iteram. Quando convergem, Opus valida e armazena. Você acorda com artefato.</p></div>
 <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É como ter um time noturno trabalhando. Output qualidade humano time, custo cents/dollars.</p></div>
-<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Async multi-modelo · custo controlado · falha graciosa quando não converge.</p></div>
+<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Async multi-modelo · custo controlado · falha graciosa quando nêo converge.</p></div>
 </div></div></div>
 
-<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🎯</span><div><span class="font-medium">Quando vale o triad</span><span class="text-neutral-500 text-sm ml-2">- Não é pra qualquer pergunta</span></div></button>
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🎯</span><div><span class="font-medium">Quando vale o triad</span><span class="text-neutral-500 text-sm ml-2">- Nêo é pra qualquer pergunta</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">High-stakes: decisão estratégica, pitch deck importante, proposta comercial, doc técnico. Coisa que importa.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Triad pra "que horas são" é overkill. Saber a fronteira economiza tokens.</p></div>
-<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Trigger explícito · custo de coordenação · alternativa: modelo único + 1 review.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">High-stakes: decisêo estratégica, pitch deck importante, proposta comercial, doc técnico. Coisa que importa.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Triad pra "que horas sêo" é overkill. Saber a fronteira economiza tokens.</p></div>
+<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Trigger explícito · custo de coordenaçêo · alternativa: modelo único + 1 review.</p></div>
 </div></div></div>
 
 </div>
@@ -315,24 +315,24 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div id="modulo-3-5" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
 <div class="p-6 border-b border-dark-600"><div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.5</span><span class="text-xs text-neutral-500">~45 min</span></div>
 <h3 class="text-2xl font-bold mb-2">📦 Soul.md + segundo cérebro — operating system pessoal</h3>
-<p class="text-neutral-400 text-sm">A integração final: identidade no soul.md, memória no AI Brain, automações em n8n, conselho no Triad. Você como sistema.</p></div>
+<p class="text-neutral-400 text-sm">A integraçêo final: identidade no soul.md, memória no AI Brain, automações em n8n, conselho no Triad. Você como sistema.</p></div>
 <div class="divide-y divide-dark-600">
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🧬</span><div><span class="font-medium">Anatomia do soul.md</span><span class="text-neutral-500 text-sm ml-2">- Identity, Mission, Business, Voice, Rhythm, Memory</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">7 seções obrigatórias. Identidade, missão, negócio, voz, ritmo, memória, hard nos. Cada uma tem prompts específicos.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Seção vazia ou rasa = Hermes genérico. Especificidade compõe ao longo dos meses.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">7 seções obrigatórias. Identidade, missêo, negócio, voz, ritmo, memória, hard nos. Cada uma tem prompts específicos.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Seçêo vazia ou rasa = Hermes genérico. Especificidade compõe ao longo dos meses.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Template fill · update mensal · "be specific" mantra.</p></div>
 </div></div></div>
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🧠</span><div><span class="font-medium">AI Brain como notebook permanente</span><span class="text-neutral-500 text-sm ml-2">- Tudo orbita ele</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Um notebook NotebookLM que cresce eternamente. Cada wrapup, cada decisão, cada doc importante vira source.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Um notebook NotebookLM que cresce eternamente. Cada wrapup, cada decisêo, cada doc importante vira source.</p></div>
 <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">É o centro gravitacional do seu sistema. Hermes consulta antes de responder qualquer coisa pessoal.</p></div>
-<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Append-only · não delete sources · skill instruction "consulte antes".</p></div>
+<div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Append-only · nêo delete sources · skill instruction "consulte antes".</p></div>
 </div></div></div>
 
-<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">📅</span><div><span class="font-medium">Rotina diária integrada</span><span class="text-neutral-500 text-sm ml-2">- Manhã, tarde, noite, semana</span></div></button>
+<div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">📅</span><div><span class="font-medium">Rotina diária integrada</span><span class="text-neutral-500 text-sm ml-2">- Manhê, tarde, noite, semana</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">8h email briefing diário. 12h podcast de 5min. 18h wrapup automático. Sexta 17h retro semanal. Tudo em n8n + NotebookLM.</p></div>
 <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hábito vira sistema. Você nunca esquece de revisar porque o sistema cobra.</p></div>
@@ -342,7 +342,7 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">💎</span><div><span class="font-medium">Quando chamar o Triad</span><span class="text-neutral-500 text-sm ml-2">- Decisões de $10k+</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
 <div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Comando "/triad &lt;objetivo&gt;" dispara o conselho de 3 IAs. Roda overnight. Output: artefato peer-reviewed.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decisões realmente importantes ganham revisão de elite por cents.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Decisões realmente importantes ganham revisêo de elite por cents.</p></div>
 <div><span class="text-purple-400 function-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Trigger explícito · custo $1-5/run · roda longe do hot path diário.</p></div>
 </div></div></div>
 
@@ -355,8 +355,8 @@ html:not(.dark) .bg-dark-900\/95{background-color:rgba(255,255,255,.95)}
 
 <div class="topic-item"><button onclick="toggleTopic(this)" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🚀</span><div><span class="font-medium">O que vem depois</span><span class="text-neutral-500 text-sm ml-2">- Próximas fronteiras</span></div></button>
 <div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Voz nativa (sem typing), agentes multi-pessoa (delegar a um Hermes "executivo"), integração com calendário/CRM nativos.</p></div>
-<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quem domina a fundação hoje, lidera amanhã.</p></div>
+<div><span class="text-purple-400 font-semibold">O que é:</span><p class="text-neutral-300 text-sm">Voz nativa (sem typing), agentes multi-pessoa (delegar a um Hermes "executivo"), integraçêo com calendário/CRM nativos.</p></div>
+<div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Quem domina a fundaçêo hoje, lidera amanhê.</p></div>
 <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Voice-first · multi-tenant · embedded automation.</p></div>
 </div></div></div>
 
